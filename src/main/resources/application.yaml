@@ -2,14 +2,22 @@ spring:
   application:
     name: authservice
   datasource:
-    url: jdbc:mariadb://localhost:3306/authdb
-    username: authuser
-    password: authpass
+    url: jdbc:mariadb://localhost:3306/flare
+    username: root
+    password: NGKm#P9lNMgV%N
     driver-class-name: org.mariadb.jdbc.Driver
+  security:
+    user:
+      name: admin
+      password: admin123
 
 springdoc:
+  api-docs:
+    path: /v1/api-docs       # ruta donde se genera el JSON de OpenAPI
   swagger-ui:
-    path: /api-docs.html
+    path: /api-docs.html     # ruta donde se accede al Swagger UI
+    display-request-duration: true  # muestra cuánto tarda cada request
+    operations-sorter: method        # ordena los endpoints por metodo (GET, POST...)
   override-with-generic-response: false
 
 management:
