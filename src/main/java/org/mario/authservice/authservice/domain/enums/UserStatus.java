@@ -1,4 +1,4 @@
-package org.mario.authservice.authservice.enums;
+package org.mario.authservice.authservice.domain.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

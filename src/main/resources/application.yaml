@@ -2,7 +2,7 @@ spring:
   application:
     name: authservice
   datasource:
-    url: jdbc:mariadb://localhost:3306/flare
+    url: jdbc:mariadb://localhost:3306/auth_db
     username: root
     password: NGKm#P9lNMgV%N
     driver-class-name: org.mariadb.jdbc.Driver
@@ -10,6 +10,16 @@ spring:
     user:
       name: admin
       password: admin123
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: false
+  open-in-view: false
+  properties:
+    hibernate:
+      format_sql: true
+      dialect: org.hibernate.dialect.MariaDBDialect
 
 springdoc:
   api-docs:
@@ -25,8 +35,3 @@ management:
     health:
       show-details: always
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database-platform: org.hibernate.dialect.MariaDBDialect
